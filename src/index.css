@@ -1,0 +1,46 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+body {
+  min-width: 420px;
+  background-color: rgb(223, 161, 148);
+}
+
+main {
+  animation: ease-in;
+  transition: 300ms;
+}
+
+h1.title {
+  display: flex;
+  justify-content: center;
+}
+
+.game-list {
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-box {
+  width: 250px;
+  height: 250px;
+  background-color: aquamarine;
+  border-style: solid;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px;
+  animation: ease-in;
+  transition: 300ms;
+}
+
+.game-box:hover {
+  filter: brightness(1.5);
+}
