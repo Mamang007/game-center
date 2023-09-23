@@ -13,7 +13,7 @@ const Home = () => {
                 <h2>Game Suit</h2>
               </div>
               <div className="game-box">
-                <img src="../assets/game-icon/suit.png" alt="Suit Game" />
+                <img src="../assets/game-icon/tictactoe.png" alt="TicTacToe Game" />
                 <h2>Game TicTacToe</h2>
               </div>
             </div>
