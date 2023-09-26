@@ -1,19 +1,21 @@
-import { useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Suit from "./pages/Suit";
 import TicTacToe from "./pages/TicTacToe";
+import NoPage from "./pages/NoPage";
 
 function App() {
-  const [isHome, setIsHome] = useState(true);
-  const [isSuit, setIsSuit] = useState(false);
-  const [isTicTacToe, setIsTicTacToe] = useState(false);
-
   return (
-    <div>
-      <Home />
-      <Suit />
-      <TicTacToe />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/">
+          <Route index element={<Home />} />
+          <Route path="suit" element={<Suit />} />
+          <Route path="tictactoe" element={<TicTacToe />} />
+          <Route path="*" element={<NoPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

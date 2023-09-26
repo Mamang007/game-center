@@ -1,13 +1,30 @@
+import Button from "../components/Button";
+
 const TicTacToe = () => {
-  const isTicTacToe = false;
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      // console.log(entry);
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      } else {
+        entry.target.classList.remove("show");
+      }
+    });
+  });
+
+  setTimeout(() => {
+    const hiddenElements = document.querySelectorAll(".hidden");
+    hiddenElements.forEach((e) => observer.observe(e));
+  }, 100);
 
   return (
     <>
-      {isTicTacToe && (
-        <main>
-          <h1>TicisTicTacToe</h1>
-        </main>
-      )}
+      <main>
+        <Button name="Back" customStyle="back-button hidden" target="/" />
+        <h1 className="title hidden" style={{ transform: "translateX(0)" }}>
+          Tictactoe Game
+        </h1>
+      </main>
     </>
   );
 };
